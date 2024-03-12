@@ -1,0 +1,24 @@
+<svg width="32.000000" height="24.000000" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient id="paint_linear_17_1074_0" x1="21.859375" y1="9.622927" x2="30.426992" y2="9.622927" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#00A3E1"/>
+			<stop offset="0.304200" stop-color="#009ADD"/>
+			<stop offset="0.798700" stop-color="#0082D4"/>
+			<stop offset="1.000000" stop-color="#0076CF"/>
+		</linearGradient>
+	</defs>
+	<rect id="Frame 277132129" rx="4.000000" width="32.000000" height="24.000000" fill="#F6F6FA" fill-opacity="1.000000"/>
+	<path id="Vector" d="M17.6821 8.84381L15.8652 12.7584L15.6812 12.7584L15.6812 8.00037L13.0859 8.00037L13.0859 16.0024L15.2378 16.0024C15.8218 16.0024 16.3408 15.6672 16.5898 15.1482L18.4175 11.2444L18.6011 11.2444L18.6011 16.0024L21.1968 16.0024L21.1968 8.00037L19.0122 8.00037C18.4497 8.00037 17.9199 8.33557 17.6821 8.84381Z" fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector" d="M7.97266 9.04932L6.90186 12.7584L6.71826 12.7584L5.63672 9.04932C5.45312 8.42212 4.87988 8.00037 4.23096 8.00037L1.66797 8.00037L1.66797 16.0024L4.26318 16.0024L4.26318 11.2444L4.44727 11.2444L5.93945 16.0024L7.66992 16.0024L9.16211 11.2444L9.34619 11.2444L9.34619 16.0024L11.9414 16.0024L11.9414 8.00037L9.37842 8.00037C8.72949 8.00037 8.14551 8.42212 7.97266 9.04932Z" fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Vector" d="M22.3247 11.5674L22.3247 16.0024L24.9209 16.0024L24.9209 13.4064L27.7119 13.4064C28.9233 13.4064 29.9512 12.6384 30.3296 11.5674L22.3247 11.5674Z" fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<linearGradient id="paint_linear_17_10741_0" x1="21.859375" y1="9.622927" x2="30.426992" y2="9.622927" gradientUnits="userSpaceOnUse">
+		<stop stop-color="#00A3E1"/>
+		<stop offset="0.304200" stop-color="#009ADD"/>
+		<stop offset="0.798700" stop-color="#0082D4"/>
+		<stop offset="1.000000" stop-color="#0076CF"/>
+	</linearGradient>
+	<path id="Vector" d="M27.6362 8.00037L21.8594 8.00037C22.2163 9.90417 23.8823 11.2455 25.8838 11.2455L30.373 11.2455C30.4053 11.0724 30.4268 10.8777 30.4268 10.683C30.4268 9.13617 29.1831 8.00037 27.6362 8.00037Z" fill="url(#paint_linear_17_10741_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+</svg>

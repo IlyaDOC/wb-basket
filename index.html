@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="src/styles/adaptive.css">
+    <title>Товары и точка</title>
+</head>
+<body>
+<header class="header" id="header">
+    <div class="container header__container">
+        <nav class="navbar">
+            <div class="burger_menu" id="burger_menu"></div>
+            <div class="logo">
+                <a href="index.html">Товары и точка</a>
+            </div>
+            <div class="search">
+                <input type="text" name="search_input" id="search_input" placeholder="Я ищу..." class="search_input">
+                <img src="./src/static/images/search.svg" alt="Search icon" class="search_icon">
+            </div>
+            <div class="user header_actions">
+                <svg width="19.000000" height="20.000000" viewBox="0 0 19 20" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <desc>
+                        Created with Pixso.
+                    </desc>
+                    <defs/>
+                    <path id="Exclude"
+                          d="M9.50586 9.70657C11.936 9.70657 14.0208 7.55869 14.0208 4.78873C14.0208 2.05399 11.9241 0 9.50586 0C7.08789 0 4.97925 2.10094 4.99121 4.81221C4.99121 7.55869 7.07593 9.70657 9.50586 9.70657ZM0 18.4977C0 19.4836 0.643311 20 2.44189 20L16.5581 20C18.3567 20 19 19.4836 19 18.4977C19 15.6338 15.343 11.6901 9.50586 11.6901C3.65698 11.6901 0 15.6338 0 18.4977Z"
+                          clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                </svg>
+                <span>Профиль</span>
+            </div>
+            <div class="shopping_cart header_actions">
+                <svg width="26.284912" height="22.859276" viewBox="0 0 26.2849 22.8593" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <desc>
+                        Created with Pixso.
+                    </desc>
+                    <defs/>
+                    <path id="Vector"
+                          d="M4 0C3.01733 0 2.11768 0.0567169 1.45435 0.151472C1.12646 0.198311 0.835205 0.257343 0.61499 0.331667C0.508301 0.367722 0.388184 0.417168 0.284912 0.489256C0.199951 0.548637 0 0.712748 0 1C0 1.28725 0.199951 1.45136 0.284912 1.51074C0.388184 1.58283 0.508301 1.63228 0.61499 1.66833C0.835205 1.74266 1.12646 1.80169 1.45435 1.84853C2.11768 1.94328 3.01733 2 4 2C4.98267 2 5.88232 1.94328 6.54565 1.84853C6.87354 1.80169 7.16479 1.74266 7.38501 1.66833C7.4917 1.63228 7.61182 1.58283 7.71509 1.51074C7.80005 1.45136 8 1.28725 8 1C8 0.712748 7.80005 0.548637 7.71509 0.489256C7.61182 0.417168 7.4917 0.367722 7.38501 0.331667C7.16479 0.257343 6.87354 0.198311 6.54565 0.151472C5.88232 0.0567169 4.98267 0 4 0ZM10.2214 14.9665C10.3828 15.4206 10.8452 15.6949 11.321 15.619L24.0874 13.5828C24.5005 13.517 24.8289 13.201 24.9106 12.7909L26.2654 5.99865C26.3875 5.38644 25.925 4.81324 25.3008 4.80317L7.94116 4.52324C7.24365 4.51199 6.74902 5.20067 6.98291 5.85812L10.2214 14.9665ZM10.8262 22.8593C12.1108 22.8593 13.1523 21.8178 13.1523 20.5331C13.1523 19.2484 12.1108 18.207 10.8262 18.207C9.5415 18.207 8.5 19.2484 8.5 20.5331C8.5 21.8178 9.5415 22.8593 10.8262 22.8593ZM24.7832 20.5331C24.7832 21.8178 23.7417 22.8593 22.457 22.8593C21.1724 22.8593 20.1309 21.8178 20.1309 20.5331C20.1309 19.2484 21.1724 18.207 22.457 18.207C23.7417 18.207 24.7832 19.2484 24.7832 20.5331Z"
+                          fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                </svg>
+                <div class="shopping_card_count">3</div>
+                <span>Корзина</span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="main" id="main">
+    <div class="container main__container">
+        <form class="basket_form">
+            <div class="basket_form__content">
+                <div class="basket_title">Корзина</div>
+                <div class="top">
+                    <div class="choose_all">
+                        <label>
+                            <input type="checkbox" name="list_item" class="real_checkbox">
+                            <span class="custom_checkbox"></span>
+                            Выбрать все
+                        </label>
+                    </div>
+                    <div class="arrow">
+                        <svg width="15.187866" height="8.766602" viewBox="0 0 15.1879 8.7666" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path id="Vector"
+                                  d="M13.5358 8.47894L7.71326 2.72791C7.63489 2.65045 7.50854 2.65106 7.43091 2.72919L1.72424 8.46906C1.33862 8.85687 0.714355 8.86688 0.316528 8.49164C-0.0931396 8.1051 -0.106934 7.45807 0.285767 7.05438L6.85461 0.302673C7.24731 -0.100891 7.89551 -0.100891 8.28821 0.302673L14.9131 7.112C15.2795 7.48865 15.2795 8.08856 14.9131 8.46521C14.5375 8.85138 13.9191 8.85754 13.5358 8.47894Z"
+                                  fill="#9797AF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="basket__list_items">
+                    <div class="basket__list_item first">
+                        <div class="basket__list_item_content first">
+                            <label>
+                                <input type="checkbox" name="list_item" class="real_checkbox check">
+                                <span class="custom_checkbox"></span>
+                            </label>
+                            <div class="basket__list_item_content_image">
+                                <img src="src/static/images/item_1.png" alt="T-Shirt">
+                                <span class="size_adaptive">56</span>
+                            </div>
+                            <div class="basket__list_item_content_info first">
+                                <div class="price price_adaptive">
+                                    <div class="actual_price">
+                                        <div class="price_value">522<span class="currency"> сом</span></div>
+                                    </div>
+                                    <div class="old_price">1051 сом</div>
+                                </div>
+                                <div class="basket__list_item_content_info_title">Футболка UZcotton мужская</div>
+                                <div class="basket__list_item_content_info_description">
+                                    <span>Цвет: белый</span>
+                                    <span class="size">Размер: 56</span>
+                                </div>
+                                <div class="basket__list_item_content_store">
+                                    <div class="warehouse">Коледино WB</div>
+                                    <div class="organization">
+                                        <span>OOO Вайлдберриз</span>
+                                        <span class="info-icon">i</span>
+                                        <div class="info_message">
+                                            <div class="info_message_title">OOO Вайлдберриз</div>
+                                            <div class="info_message_registration_number">ОГРН: 5167746237148</div>
+                                            <div class="info_message_address">129337, Москва, улица Красная Сосна, 2,
+                                                корпус 1, стр. 1, помещение 2, офис 34
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <div class="count__input">
+                                <button class="button_minus">−</button>
+                                <input type="number" class="count__input_number" aria-autocomplete="none" min="1"
+                                       max="999" value="1">
+                                <button class="button_plus">+</button>
+                            </div>
+                            <div class="goods_rest">Осталось 2 шт.</div>
+                            <div class="count__additional_actions">
+                                <div class="like">
+                                    <svg width="18.120850" height="16.000000" viewBox="0 0 18.1208 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <desc>
+                                            Created with Pixso.
+                                        </desc>
+                                        <defs/>
+                                        <path id="Vector (Stroke)"
+                                              d="M2.09436 2.05856C1.32629 2.75223 0.827271 3.83286 1.05542 5.42929C1.28381 7.02783 2.32544 8.68521 3.86487 10.3478C5.31909 11.9184 7.17004 13.4437 9.06042 14.874C10.9508 13.4437 12.8018 11.9184 14.2561 10.3478C15.7955 8.68521 16.837 7.02783 17.0654 5.42929C17.2935 3.83286 16.7944 2.75223 16.0264 2.05856C15.2371 1.34573 14.1154 1 13.0604 1C11.1924 1 10.1528 2.08478 9.57812 2.68442C9.51855 2.74661 9.46399 2.80356 9.41394 2.85355C9.21875 3.04883 8.9021 3.04883 8.70691 2.85355C8.65686 2.80356 8.60229 2.74661 8.54272 2.68442C7.96802 2.08478 6.92847 1 5.06042 1C4.00537 1 2.88367 1.34573 2.09436 2.05856ZM1.42419 1.31644C2.4342 0.404266 3.8125 0 5.06042 0C7.13171 0 8.40588 1.11258 9.06042 1.77863C9.71497 1.11258 10.9891 0 13.0604 0C14.3083 0 15.6866 0.404266 16.6967 1.31644C17.7278 2.24777 18.3273 3.66714 18.0554 5.57071C17.7838 7.47217 16.5754 9.31479 14.9899 11.0272C13.396 12.7485 11.3668 14.3952 9.36035 15.9C9.18262 16.0333 8.93823 16.0333 8.76038 15.9C6.75403 14.3952 4.72485 12.7485 3.1311 11.0272C1.54553 9.31479 0.337158 7.47217 0.0654297 5.57071C-0.206543 3.66714 0.392944 2.24777 1.42419 1.31644Z"
+                                              fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="trash">
+                                    <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <desc>
+                                            Created with Pixso.
+                                        </desc>
+                                        <defs/>
+                                        <path id="Vector"
+                                              d="M4.5 3.5L12.9257 3.5L12.144 13.6155C12.0837 14.3968 11.4321 15 10.6486 15L4.34644 15C3.56433 15 2.91357 14.3992 2.8512 13.6196L2.04163 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15759 0 5.96875 0L9.03125 0C9.84241 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7761 2.5 15 2.72385 15 3C15 3.27615 14.7761 3.5 14.5 3.5L13.9286 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6486 16L4.34644 16C3.04297 16 1.95825 14.9986 1.85437 13.6994L1.03845 3.5L0.5 3.5C0.223877 3.5 0 3.27615 0 3C0 2.72385 0.223877 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20987 5.70984 1 5.96875 1L9.03125 1C9.29016 1 9.5 1.20987 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                              fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="actual_price">
+                                <div class="price_value">522<span class="currency"> сом</span></div>
+                            </div>
+                            <div class="old_price">1051 сом</div>
+                            <div class="discount_info">
+                                <div class="discount_info_text">
+                                    <div class="discount_info_title">Скидка 55%</div>
+                                    <div class="discount_info_des">−300 сом</div>
+                                </div>
+                                <div class="discount_info_text">
+                                    <div class="discount_info_title">Скидка покупателя 10%</div>
+                                    <div class="discount_info_des">−30 сом</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__list_item second">
+                        <div class="basket__list_item_content second">
+                            <label>
+                                <input type="checkbox" name="list_item" class="real_checkbox check">
+                                <span class="custom_checkbox"></span>
+                            </label>
+                            <div class="basket__list_item_content_image">
+                                <img src="src/static/images/item_2.png" alt="Phone case">
+                            </div>
+                            <div class="basket__list_item_content_info second">
+                                <div class="price price_adaptive">
+                                    <div class="actual_price">
+                                        <div class="price_value big_price">2 100 047<span class="currency"> сом</span>
+                                        </div>
+                                    </div>
+                                    <div class="old_price">2 300 047 сом</div>
+                                </div>
+                                <div class="basket__list_item_content_info_title">Силиконовый чехол картхолдер
+                                    (отверстия) для карт,
+                                    прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                                </div>
+                                <div class="basket__list_item_content_info_description">
+                                    <span>Цвет: прозрачный</span>
+
+                                </div>
+                                <div class="basket__list_item_content_store">
+                                    <div class="warehouse">Коледино WB</div>
+                                    <div class="organization">
+                                        <span>OOO Мегапрофстиль</span>
+                                        <span class="info-icon">i</span>
+                                        <div class="info_message">
+                                            <div class="info_message_title">OOO Мегапрофстиль</div>
+                                            <div class="info_message_registration_number">ОГРН: 5167746237148</div>
+                                            <div class="info_message_address">129337, Москва, улица Красная Сосна, 2,
+                                                корпус 1, стр. 1, помещение 2, офис 34
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="count second">
+                            <div class="count__input">
+                                <button class="button_minus">−</button>
+                                <input type="number" class="count__input_number" aria-autocomplete="none" min="1"
+                                       max="999" value="200">
+                                <button class="button_plus">+</button>
+                            </div>
+                            <div class="goods_rest"></div>
+                            <div class="count__additional_actions">
+                                <div class="like">
+                                    <svg width="18.120850" height="16.000000" viewBox="0 0 18.1208 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <desc>
+                                            Created with Pixso.
+                                        </desc>
+                                        <defs/>
+                                        <path id="Vector (Stroke)"
+                                              d="M2.09436 2.05856C1.32629 2.75223 0.827271 3.83286 1.05542 5.42929C1.28381 7.02783 2.32544 8.68521 3.86487 10.3478C5.31909 11.9184 7.17004 13.4437 9.06042 14.874C10.9508 13.4437 12.8018 11.9184 14.2561 10.3478C15.7955 8.68521 16.837 7.02783 17.0654 5.42929C17.2935 3.83286 16.7944 2.75223 16.0264 2.05856C15.2371 1.34573 14.1154 1 13.0604 1C11.1924 1 10.1528 2.08478 9.57812 2.68442C9.51855 2.74661 9.46399 2.80356 9.41394 2.85355C9.21875 3.04883 8.9021 3.04883 8.70691 2.85355C8.65686 2.80356 8.60229 2.74661 8.54272 2.68442C7.96802 2.08478 6.92847 1 5.06042 1C4.00537 1 2.88367 1.34573 2.09436 2.05856ZM1.42419 1.31644C2.4342 0.404266 3.8125 0 5.06042 0C7.13171 0 8.40588 1.11258 9.06042 1.77863C9.71497 1.11258 10.9891 0 13.0604 0C14.3083 0 15.6866 0.404266 16.6967 1.31644C17.7278 2.24777 18.3273 3.66714 18.0554 5.57071C17.7838 7.47217 16.5754 9.31479 14.9899 11.0272C13.396 12.7485 11.3668 14.3952 9.36035 15.9C9.18262 16.0333 8.93823 16.0333 8.76038 15.9C6.75403 14.3952 4.72485 12.7485 3.1311 11.0272C1.54553 9.31479 0.337158 7.47217 0.0654297 5.57071C-0.206543 3.66714 0.392944 2.24777 1.42419 1.31644Z"
+                                              fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="trash">
+                                    <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <desc>
+                                            Created with Pixso.
+                                        </desc>
+                                        <defs/>
+                                        <path id="Vector"
+                                              d="M4.5 3.5L12.9257 3.5L12.144 13.6155C12.0837 14.3968 11.4321 15 10.6486 15L4.34644 15C3.56433 15 2.91357 14.3992 2.8512 13.6196L2.04163 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15759 0 5.96875 0L9.03125 0C9.84241 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7761 2.5 15 2.72385 15 3C15 3.27615 14.7761 3.5 14.5 3.5L13.9286 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6486 16L4.34644 16C3.04297 16 1.95825 14.9986 1.85437 13.6994L1.03845 3.5L0.5 3.5C0.223877 3.5 0 3.27615 0 3C0 2.72385 0.223877 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20987 5.70984 1 5.96875 1L9.03125 1C9.29016 1 9.5 1.20987 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                              fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="actual_price">
+                                <div class="price_value big_price">2 100 047<span class="currency"> сом</span></div>
+                            </div>
+                            <div class="old_price">2 300 047 сом</div>
+                            <div class="discount_info">
+                                <div class="discount_info_text">
+                                    <div class="discount_info_title">Скидка 55%</div>
+                                    <div class="discount_info_des">−300 сом</div>
+                                </div>
+                                <div class="discount_info_text">
+                                    <div class="discount_info_title">Скидка покупателя 10%</div>
+                                    <div class="discount_info_des">−30 сом</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basket__list_item">
+                        <div class="basket__list_item_content third">
+                            <label>
+                                <input type="checkbox" name="list_item" class="real_checkbox check">
+                                <span class="custom_checkbox"></span>
+                            </label>
+                            <div class="basket__list_item_content_image">
+                                <img src="src/static/images/item_3.png" alt="Phone case">
+                            </div>
+                            <div class="basket__list_item_content_info third">
+                                <div class="price price_adaptive">
+                                    <div class="actual_price">
+                                        <div class="price_value">494<span class="currency"> сом</span></div>
+                                    </div>
+                                    <div class="old_price">950 сом</div>
+                                </div>
+                                <div class="basket__list_item_content_info_title">Карандаши цветные Faber-Castell
+                                    "Замок",
+                                    набор 24 цвета, заточенные, шестигранные, Faber-Castell
+                                </div>
+                                <div class="basket__list_item_content_info_description">
+                                    <span></span>
+                                </div>
+                                <div class="basket__list_item_content_store">
+                                    <div class="warehouse">Коледино WB</div>
+                                    <div class="organization">
+                                        <span>OOO Мегапрофстиль</span>
+                                        <span class="info-icon">i</span>
+                                        <div class="info_message">
+                                            <div class="info_message_title">OOO Мегапрофстиль</div>
+                                            <div class="info_message_registration_number">ОГРН: 5167746237148</div>
+                                            <div class="info_message_address">129337, Москва, улица Красная Сосна, 2,
+                                                корпус 1, стр. 1, помещение 2, офис 34
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="count">
+                            <div class="count__input">
+                                <button class="button_minus">−</button>
+                                <input type="number" class="count__input_number" aria-autocomplete="none" min="1"
+                                       max="999" value="2">
+                                <button class="button_plus">+</button>
+                            </div>
+                            <div class="goods_rest">Осталось 2 шт.</div>
+                            <div class="count__additional_actions">
+                                <div class="like">
+                                    <svg width="18.120850" height="16.000000" viewBox="0 0 18.1208 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <desc>
+                                            Created with Pixso.
+                                        </desc>
+                                        <defs/>
+                                        <path id="Vector (Stroke)"
+                                              d="M2.09436 2.05856C1.32629 2.75223 0.827271 3.83286 1.05542 5.42929C1.28381 7.02783 2.32544 8.68521 3.86487 10.3478C5.31909 11.9184 7.17004 13.4437 9.06042 14.874C10.9508 13.4437 12.8018 11.9184 14.2561 10.3478C15.7955 8.68521 16.837 7.02783 17.0654 5.42929C17.2935 3.83286 16.7944 2.75223 16.0264 2.05856C15.2371 1.34573 14.1154 1 13.0604 1C11.1924 1 10.1528 2.08478 9.57812 2.68442C9.51855 2.74661 9.46399 2.80356 9.41394 2.85355C9.21875 3.04883 8.9021 3.04883 8.70691 2.85355C8.65686 2.80356 8.60229 2.74661 8.54272 2.68442C7.96802 2.08478 6.92847 1 5.06042 1C4.00537 1 2.88367 1.34573 2.09436 2.05856ZM1.42419 1.31644C2.4342 0.404266 3.8125 0 5.06042 0C7.13171 0 8.40588 1.11258 9.06042 1.77863C9.71497 1.11258 10.9891 0 13.0604 0C14.3083 0 15.6866 0.404266 16.6967 1.31644C17.7278 2.24777 18.3273 3.66714 18.0554 5.57071C17.7838 7.47217 16.5754 9.31479 14.9899 11.0272C13.396 12.7485 11.3668 14.3952 9.36035 15.9C9.18262 16.0333 8.93823 16.0333 8.76038 15.9C6.75403 14.3952 4.72485 12.7485 3.1311 11.0272C1.54553 9.31479 0.337158 7.47217 0.0654297 5.57071C-0.206543 3.66714 0.392944 2.24777 1.42419 1.31644Z"
+                                              fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div class="trash">
+                                    <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <desc>
+                                            Created with Pixso.
+                                        </desc>
+                                        <defs/>
+                                        <path id="Vector"
+                                              d="M4.5 3.5L12.9257 3.5L12.144 13.6155C12.0837 14.3968 11.4321 15 10.6486 15L4.34644 15C3.56433 15 2.91357 14.3992 2.8512 13.6196L2.04163 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15759 0 5.96875 0L9.03125 0C9.84241 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7761 2.5 15 2.72385 15 3C15 3.27615 14.7761 3.5 14.5 3.5L13.9286 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6486 16L4.34644 16C3.04297 16 1.95825 14.9986 1.85437 13.6994L1.03845 3.5L0.5 3.5C0.223877 3.5 0 3.27615 0 3C0 2.72385 0.223877 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20987 5.70984 1 5.96875 1L9.03125 1C9.29016 1 9.5 1.20987 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                              fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="actual_price">
+                                <div class="price_value">494<span class="currency"> сом</span></div>
+                            </div>
+                            <div class="old_price">950 сом</div>
+                            <div class="discount_info">
+                                <div class="discount_info_text">
+                                    <div class="discount_info_title">Скидка 55%</div>
+                                    <div class="discount_info_des">−300 сом</div>
+                                </div>
+                                <div class="discount_info_text">
+                                    <div class="discount_info_title">Скидка покупателя 10%</div>
+                                    <div class="discount_info_des">−30 сом</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <section class="absentees">
+                    <div class="top">
+                        <div class="absentees__title">
+                            Отсутствуют · <span class="absentees__title_count">3 товара</span>
+                        </div>
+                        <div class="arrow">
+                            <svg width="15.187866" height="8.766602" viewBox="0 0 15.1879 8.7666" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs/>
+                                <path id="Vector"
+                                      d="M13.5358 8.47894L7.71326 2.72791C7.63489 2.65045 7.50854 2.65106 7.43091 2.72919L1.72424 8.46906C1.33862 8.85687 0.714355 8.86688 0.316528 8.49164C-0.0931396 8.1051 -0.106934 7.45807 0.285767 7.05438L6.85461 0.302673C7.24731 -0.100891 7.89551 -0.100891 8.28821 0.302673L14.9131 7.112C15.2795 7.48865 15.2795 8.08856 14.9131 8.46521C14.5375 8.85138 13.9191 8.85754 13.5358 8.47894Z"
+                                      fill="#9797AF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="basket__list_items">
+                        <div class="basket__list_item">
+                            <div class="basket__list_item_content">
+                                <div class="basket__list_item_content_image">
+                                    <img src="src/static/images/item_1.png" alt="T-Shirt">
+                                    <span class="size_adaptive">56</span>
+                                </div>
+                                <div class="basket__list_item_content_info">
+                                    <div class="basket__list_item_content_info_title grey_color">Футболка UZcotton
+                                        мужская
+                                    </div>
+                                    <div class="basket__list_item_content_info_description grey_color">
+                                        <span>Цвет: белый</span>
+                                        <span class="size">Размер: 56</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="count">
+                                <div class="count__additional_actions absentees__additional_actions">
+                                    <div class="like">
+                                        <svg width="18.120850" height="16.000000" viewBox="0 0 18.1208 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs/>
+                                            <path id="Vector (Stroke)"
+                                                  d="M2.09436 2.05856C1.32629 2.75223 0.827271 3.83286 1.05542 5.42929C1.28381 7.02783 2.32544 8.68521 3.86487 10.3478C5.31909 11.9184 7.17004 13.4437 9.06042 14.874C10.9508 13.4437 12.8018 11.9184 14.2561 10.3478C15.7955 8.68521 16.837 7.02783 17.0654 5.42929C17.2935 3.83286 16.7944 2.75223 16.0264 2.05856C15.2371 1.34573 14.1154 1 13.0604 1C11.1924 1 10.1528 2.08478 9.57812 2.68442C9.51855 2.74661 9.46399 2.80356 9.41394 2.85355C9.21875 3.04883 8.9021 3.04883 8.70691 2.85355C8.65686 2.80356 8.60229 2.74661 8.54272 2.68442C7.96802 2.08478 6.92847 1 5.06042 1C4.00537 1 2.88367 1.34573 2.09436 2.05856ZM1.42419 1.31644C2.4342 0.404266 3.8125 0 5.06042 0C7.13171 0 8.40588 1.11258 9.06042 1.77863C9.71497 1.11258 10.9891 0 13.0604 0C14.3083 0 15.6866 0.404266 16.6967 1.31644C17.7278 2.24777 18.3273 3.66714 18.0554 5.57071C17.7838 7.47217 16.5754 9.31479 14.9899 11.0272C13.396 12.7485 11.3668 14.3952 9.36035 15.9C9.18262 16.0333 8.93823 16.0333 8.76038 15.9C6.75403 14.3952 4.72485 12.7485 3.1311 11.0272C1.54553 9.31479 0.337158 7.47217 0.0654297 5.57071C-0.206543 3.66714 0.392944 2.24777 1.42419 1.31644Z"
+                                                  fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="trash">
+                                        <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs/>
+                                            <path id="Vector"
+                                                  d="M4.5 3.5L12.9257 3.5L12.144 13.6155C12.0837 14.3968 11.4321 15 10.6486 15L4.34644 15C3.56433 15 2.91357 14.3992 2.8512 13.6196L2.04163 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15759 0 5.96875 0L9.03125 0C9.84241 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7761 2.5 15 2.72385 15 3C15 3.27615 14.7761 3.5 14.5 3.5L13.9286 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6486 16L4.34644 16C3.04297 16 1.95825 14.9986 1.85437 13.6994L1.03845 3.5L0.5 3.5C0.223877 3.5 0 3.27615 0 3C0 2.72385 0.223877 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20987 5.70984 1 5.96875 1L9.03125 1C9.29016 1 9.5 1.20987 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                                  fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__list_item">
+                            <div class="basket__list_item_content">
+                                <div class="basket__list_item_content_image">
+                                    <img src="src/static/images/item_2.png" alt="Phone case">
+                                </div>
+                                <div class="basket__list_item_content_info">
+                                    <div class="basket__list_item_content_info_title grey_color">Силиконовый чехол
+                                        картхолдер
+                                        (отверстия) для карт,
+                                        прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                                    </div>
+                                    <div class="basket__list_item_content_info_description grey_color">
+                                        <span>Цвет: прозрачный</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="count">
+                                <div class="count__additional_actions absentees__additional_actions">
+                                    <div class="like">
+                                        <svg width="18.120850" height="16.000000" viewBox="0 0 18.1208 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs/>
+                                            <path id="Vector (Stroke)"
+                                                  d="M2.09436 2.05856C1.32629 2.75223 0.827271 3.83286 1.05542 5.42929C1.28381 7.02783 2.32544 8.68521 3.86487 10.3478C5.31909 11.9184 7.17004 13.4437 9.06042 14.874C10.9508 13.4437 12.8018 11.9184 14.2561 10.3478C15.7955 8.68521 16.837 7.02783 17.0654 5.42929C17.2935 3.83286 16.7944 2.75223 16.0264 2.05856C15.2371 1.34573 14.1154 1 13.0604 1C11.1924 1 10.1528 2.08478 9.57812 2.68442C9.51855 2.74661 9.46399 2.80356 9.41394 2.85355C9.21875 3.04883 8.9021 3.04883 8.70691 2.85355C8.65686 2.80356 8.60229 2.74661 8.54272 2.68442C7.96802 2.08478 6.92847 1 5.06042 1C4.00537 1 2.88367 1.34573 2.09436 2.05856ZM1.42419 1.31644C2.4342 0.404266 3.8125 0 5.06042 0C7.13171 0 8.40588 1.11258 9.06042 1.77863C9.71497 1.11258 10.9891 0 13.0604 0C14.3083 0 15.6866 0.404266 16.6967 1.31644C17.7278 2.24777 18.3273 3.66714 18.0554 5.57071C17.7838 7.47217 16.5754 9.31479 14.9899 11.0272C13.396 12.7485 11.3668 14.3952 9.36035 15.9C9.18262 16.0333 8.93823 16.0333 8.76038 15.9C6.75403 14.3952 4.72485 12.7485 3.1311 11.0272C1.54553 9.31479 0.337158 7.47217 0.0654297 5.57071C-0.206543 3.66714 0.392944 2.24777 1.42419 1.31644Z"
+                                                  fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="trash">
+                                        <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs/>
+                                            <path id="Vector"
+                                                  d="M4.5 3.5L12.9257 3.5L12.144 13.6155C12.0837 14.3968 11.4321 15 10.6486 15L4.34644 15C3.56433 15 2.91357 14.3992 2.8512 13.6196L2.04163 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15759 0 5.96875 0L9.03125 0C9.84241 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7761 2.5 15 2.72385 15 3C15 3.27615 14.7761 3.5 14.5 3.5L13.9286 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6486 16L4.34644 16C3.04297 16 1.95825 14.9986 1.85437 13.6994L1.03845 3.5L0.5 3.5C0.223877 3.5 0 3.27615 0 3C0 2.72385 0.223877 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20987 5.70984 1 5.96875 1L9.03125 1C9.29016 1 9.5 1.20987 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                                  fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__list_item">
+                            <div class="basket__list_item_content">
+                                <div class="basket__list_item_content_image">
+                                    <img src="src/static/images/item_3.png" alt="Pencils">
+                                    <span class="size_adaptive">56/54/52...</span>
+                                </div>
+                                <div class="basket__list_item_content_info">
+                                    <div class="basket__list_item_content_info_title grey_color">Карандаши цветные
+                                        Faber-Castell
+                                        "Замок",
+                                        набор 24 цвета, заточенные, шестигранные, Faber-Castell
+                                    </div>
+                                    <div class="basket__list_item_content_info_description grey_color">
+                                        <span>Цвет: прозрачный</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="count">
+                                <div class="count__additional_actions absentees__additional_actions">
+                                    <div class="like">
+                                        <svg width="18.120850" height="16.000000" viewBox="0 0 18.1208 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs/>
+                                            <path id="Vector (Stroke)"
+                                                  d="M2.09436 2.05856C1.32629 2.75223 0.827271 3.83286 1.05542 5.42929C1.28381 7.02783 2.32544 8.68521 3.86487 10.3478C5.31909 11.9184 7.17004 13.4437 9.06042 14.874C10.9508 13.4437 12.8018 11.9184 14.2561 10.3478C15.7955 8.68521 16.837 7.02783 17.0654 5.42929C17.2935 3.83286 16.7944 2.75223 16.0264 2.05856C15.2371 1.34573 14.1154 1 13.0604 1C11.1924 1 10.1528 2.08478 9.57812 2.68442C9.51855 2.74661 9.46399 2.80356 9.41394 2.85355C9.21875 3.04883 8.9021 3.04883 8.70691 2.85355C8.65686 2.80356 8.60229 2.74661 8.54272 2.68442C7.96802 2.08478 6.92847 1 5.06042 1C4.00537 1 2.88367 1.34573 2.09436 2.05856ZM1.42419 1.31644C2.4342 0.404266 3.8125 0 5.06042 0C7.13171 0 8.40588 1.11258 9.06042 1.77863C9.71497 1.11258 10.9891 0 13.0604 0C14.3083 0 15.6866 0.404266 16.6967 1.31644C17.7278 2.24777 18.3273 3.66714 18.0554 5.57071C17.7838 7.47217 16.5754 9.31479 14.9899 11.0272C13.396 12.7485 11.3668 14.3952 9.36035 15.9C9.18262 16.0333 8.93823 16.0333 8.76038 15.9C6.75403 14.3952 4.72485 12.7485 3.1311 11.0272C1.54553 9.31479 0.337158 7.47217 0.0654297 5.57071C-0.206543 3.66714 0.392944 2.24777 1.42419 1.31644Z"
+                                                  fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                    <div class="trash">
+                                        <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <desc>
+                                                Created with Pixso.
+                                            </desc>
+                                            <defs/>
+                                            <path id="Vector"
+                                                  d="M4.5 3.5L12.9257 3.5L12.144 13.6155C12.0837 14.3968 11.4321 15 10.6486 15L4.34644 15C3.56433 15 2.91357 14.3992 2.8512 13.6196L2.04163 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15759 0 5.96875 0L9.03125 0C9.84241 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7761 2.5 15 2.72385 15 3C15 3.27615 14.7761 3.5 14.5 3.5L13.9286 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6486 16L4.34644 16C3.04297 16 1.95825 14.9986 1.85437 13.6994L1.03845 3.5L0.5 3.5C0.223877 3.5 0 3.27615 0 3C0 2.72385 0.223877 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20987 5.70984 1 5.96875 1L9.03125 1C9.29016 1 9.5 1.20987 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                                  fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="basket__delivery my_section">
+                    <div class="basket__delivery_top">
+                        <div class="basket__delivery_title basket_second_title">Способ доставки</div>
+                        <div class="basket__delivery_edit basket_edit delivery_edit_action">Изменить</div>
+                    </div>
+                    <div class="basket__delivery_details">
+                        <div class="pickup_point">
+                            <div class="delivery_details_title">Пункт выдачи</div>
+                            <div class="delivery_details_description">
+                                <div class="address">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
+                                <div class="shop_details">
+                                    <div class="rating">
+                                        <div class="rating_star">
+                                            <svg width="11.000000" height="10.632446" viewBox="0 0 11 10.6324"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <desc>
+                                                    Created with Pixso.
+                                                </desc>
+                                                <defs/>
+                                                <path id="Path (Stroke)"
+                                                      d="M6.19763 0.465576C5.93811 -0.155151 5.06201 -0.155151 4.80249 0.465576L6.19763 0.465576ZM4.80249 0.465576L3.64722 3.2262L0.692017 3.48254C0.0192871 3.54114 -0.237671 4.3761 0.259766 4.81104L2.50513 6.77551L1.83203 9.69873C1.68433 10.3402 2.37793 10.8732 2.9613 10.5187L5.50037 8.97253L8.03796 10.5179C8.62268 10.8752 9.31567 10.3391 9.16858 9.69897L8.49548 6.77551L10.7401 4.81177C11.2385 4.37598 10.9792 3.54163 10.3083 3.48303L7.35291 3.22668L6.19763 0.465576L4.80249 0.465576Z"
+                                                      fill="#FF970D" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                            </svg>
+                                        </div>
+                                        <div class="rating_count">4.99</div>
+                                    </div>
+                                    <div class="work_time">Ежедневно с 10 до 21</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basket__delivery_price">
+                            <div class="delivery_details_title">Стоимость доставки</div>
+                            <div class="delivery_details_description">Бесплатно</div>
+                        </div>
+                        <div class="delivery_date">
+                            <div class="delivery_details_title">5—6 февраля</div>
+                            <div class="delivery_goods">
+                                <div class="good">
+                                    <img src="src/static/images/item_1.png" alt="T-shirt">
+
+                                </div>
+                                <div class="good">
+                                    <img src="src/static/images/item_2.png" alt="Phone case">
+                                    <div class="good_count">184</div>
+                                </div>
+                                <div class="good">
+                                    <img src="src/static/images/item_3.png" alt="Pencils">
+                                    <div class="good_count">2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery_date">
+                            <div class="delivery_details_title">7—8 февраля</div>
+                            <div class="delivery_goods">
+                                <div class="good">
+                                    <img src="src/static/images/item_2.png" alt="Phone case">
+                                    <div class="good_count">16</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="return_terms">
+                        <div class="checkmark">
+                            <svg width="9.812500" height="7.416382" viewBox="0 0 9.8125 7.41638" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs>
+                                    <linearGradient id="paint_linear_7_2267_0" x1="2.366457" y1="0.273437" x2="5.866455"
+                                                    y2="8.273436" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#0CD38B"/>
+                                        <stop offset="1.000000" stop-color="#0CB477"/>
+                                    </linearGradient>
+                                </defs>
+                                <path id="Rectangle 2703 (Stroke)"
+                                      d="M0.349243 2.42822C0.768555 2.06885 1.39978 2.11743 1.75928 2.53674L3.99512 5.14514L8.04907 0.354004C8.40588 -0.0675049 9.03687 -0.120117 9.45837 0.236572C9.88 0.593384 9.93262 1.22437 9.57593 1.646L5.14258 6.88525C4.5459 7.59045 3.45984 7.59387 2.85864 6.89258L0.240723 3.83826C-0.118652 3.41895 -0.0701904 2.78772 0.349243 2.42822Z"
+                                      fill="url(#paint_linear_7_2267_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="return_terms_des">Обратная доставка товаров на склад при отказе —
+                            <span class="free">бесплатно</span>
+                            <div class="free_return_info">
+                                Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="payment_method my_section">
+                    <div class="basket__delivery_top">
+                        <div class="payment_method_title basket_second_title">Способ оплаты</div>
+                        <div class="payment_method_edit basket_edit payment_edit_action">Изменить</div>
+                    </div>
+                    <div class="card_details">
+                        <div class="payment_system">
+                            <svg width="30.000000" height="9.333374" viewBox="0 0 30 9.33337" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs>
+                                    <linearGradient id="paint_linear_7_2286_0" x1="20.859009" y1="2.289431"
+                                                    x2="29.426626" y2="2.289431" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00A3E1"/>
+                                        <stop offset="0.304200" stop-color="#009ADD"/>
+                                        <stop offset="0.798700" stop-color="#0082D4"/>
+                                        <stop offset="1.000000" stop-color="#0076CF"/>
+                                    </linearGradient>
+                                </defs>
+                                <path id="Vector"
+                                      d="M16.6812 1.51038L14.8644 5.4248L14.6805 5.4248L14.6805 0.66687L12.0851 0.66687L12.0851 8.66895L14.2371 8.66895C14.821 8.66895 15.3402 8.33374 15.5889 7.8147L17.4165 3.91101L17.6003 3.91101L17.6003 8.66895L20.1958 8.66895L20.1958 0.66687L18.0114 0.66687C17.449 0.66687 16.9191 1.00208 16.6812 1.51038Z"
+                                      fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector"
+                                      d="M6.97241 1.71582L5.90186 5.4248L5.71802 5.4248L4.6366 1.71582C4.45276 1.08862 3.87952 0.66687 3.23071 0.66687L0.667725 0.66687L0.667725 8.66895L3.26318 8.66895L3.26318 3.91101L3.44702 3.91101L4.93933 8.66895L6.66968 8.66895L8.16199 3.91101L8.34583 3.91101L8.34583 8.66895L10.9413 8.66895L10.9413 0.66687L8.3783 0.66687C7.72949 0.66687 7.14551 1.08862 6.97241 1.71582Z"
+                                      fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector"
+                                      d="M21.3243 4.23401L21.3243 8.66895L23.9205 8.66895L23.9205 6.07288L26.7115 6.07288C27.9231 6.07288 28.9508 5.30481 29.3295 4.23401L21.3243 4.23401Z"
+                                      fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <linearGradient id="paint_linear_7_22861_0" x1="20.859009" y1="2.289431" x2="29.426626"
+                                                y2="2.289431" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00A3E1"/>
+                                    <stop offset="0.304200" stop-color="#009ADD"/>
+                                    <stop offset="0.798700" stop-color="#0082D4"/>
+                                    <stop offset="1.000000" stop-color="#0076CF"/>
+                                </linearGradient>
+                                <path id="Vector"
+                                      d="M26.6356 0.66687L20.859 0.66687C21.2159 2.57068 22.882 3.91199 24.8832 3.91199L29.3726 3.91199C29.405 3.73889 29.4266 3.54419 29.4266 3.34949C29.4266 1.80261 28.1826 0.66687 26.6356 0.66687Z"
+                                      fill="url(#paint_linear_7_22861_0)" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </svg>
+                        </div>
+                        <div class="card_number">1234 56•• •••• 1234</div>
+                        <div class="validity_period">01/30</div>
+                    </div>
+                    <div class="payment_details">Спишем оплату с карты при получении</div>
+                </section>
+                <section class="recipient_details my_section">
+                    <div class="basket__delivery_top">
+                        <div class="recipient_method_title basket_second_title">Получатель</div>
+                    </div>
+                    <div class="recipient_details_form">
+                        <div class="recipient_main">
+                            <div class="form_name">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" placeholder="Имя" class="my_input">
+                                <div class="error_message">Укажите имя</div>
+                            </div>
+                            <div class="form_last_name">
+                                <label for="lastName">Фамилия</label>
+                                <input type="text" id="lastName" placeholder="Фамилия" class="my_input">
+                                <div class="error_message">Введите фамилию</div>
+                            </div>
+                        </div>
+                        <div class="recipient_additional">
+                            <div class="form_email">
+                                <label for="email">Почта</label>
+                                <input type="email" id="email" placeholder="Почта" class="my_input">
+                                <div class="error_message">Проверьте адрес электронной почты</div>
+                            </div>
+                            <div class="form_tel">
+                                <label for="tel">Телефон</label>
+                                <input type="tel" id="tel" placeholder="Телефон" class="my_input" maxlength="30">
+                                <div class="error_message">Формат: +9 999 999 99 99</div>
+                            </div>
+                            <div class="form_inn">
+                                <label for="inn">ИНН для таможни</label>
+                                <input type="text" id="inn" placeholder="ИНН" class="my_input">
+                                <div class="error_message">Проверьте ИНН</div>
+                                <div class="inn_des">Для таможенного оформления</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <div class="basket_form__sidebar">
+                <div class="sidebar_total">
+                    <div class="sidebar_total_title">Итого</div>
+                    <div class="sidebar_total_des"><span id="total_price">2 101 063</span> <span>сом</span></div>
+                </div>
+                <div class="sidebar__price_details">
+                    <div class="products_amount">
+                        <div class="products_amount_title">203 товара</div>
+                        <div class="products_amount_des">2 302 048 сом</div>
+                    </div>
+                    <div class="discount">
+                        <div class="discount_title">Скидка</div>
+                        <div class="discount_des">−200 985 сом</div>
+                    </div>
+                    <div class="sidebar__delivery_price">
+                        <div class="delivery_price_title">Доставка</div>
+                        <div class="delivery_price_des">Бесплатно</div>
+                    </div>
+                </div>
+                <div class="sidebar__pickup_point">
+                    <div class="sidebar__pickup_point_title">
+                        <div class="sidebar__pickup_point_title_text">Доставка в пункт выдачи</div>
+                        <div class="edit_pencil delivery_edit_action">
+                            <svg width="15.863281" height="15.862885" viewBox="0 0 15.8633 15.8629" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs/>
+                                <path id="Vector"
+                                      d="M13.8577 5.78699L13.8579 5.78714L15.2759 4.36905C16.0591 3.58585 16.0591 2.31601 15.2759 1.53281L14.3306 0.587402C13.5474 -0.195801 12.2776 -0.195801 11.4944 0.587402L11.0217 1.06006L11.0215 1.05991L0.80835 11.2729L0.0100098 15.2646C-0.0598145 15.6144 0.248535 15.9229 0.598389 15.8529L4.59009 15.0546L13.8577 5.78699ZM11.0215 2.95078L12.9124 4.84158L3.93091 13.8229L1.56738 14.2957L2.04004 11.9321L11.0215 2.95078ZM13.8579 3.8963L11.967 2.00549L12.4397 1.53281C12.7007 1.27176 13.124 1.27176 13.3853 1.53281L14.3306 2.47821C14.5916 2.73929 14.5916 3.16257 14.3306 3.42365L13.8579 3.8963Z"
+                                      fill="#CB11AB" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="sidebar__pickup_point_address">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
+                    <div class="address_delivery_date">5–8 фев</div>
+                    <div class="return_terms sidebar__return_terms">
+                        <div class="checkmark">
+                            <svg width="9.812500" height="7.416382" viewBox="0 0 9.8125 7.41638" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs>
+                                    <linearGradient id="paint_linear_7_2267_0" x1="2.366457" y1="0.273437"
+                                                    x2="5.866455"
+                                                    y2="8.273436" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#0CD38B"/>
+                                        <stop offset="1.000000" stop-color="#0CB477"/>
+                                    </linearGradient>
+                                </defs>
+                                <path id="Rectangle 2703 (Stroke)"
+                                      d="M0.349243 2.42822C0.768555 2.06885 1.39978 2.11743 1.75928 2.53674L3.99512 5.14514L8.04907 0.354004C8.40588 -0.0675049 9.03687 -0.120117 9.45837 0.236572C9.88 0.593384 9.93262 1.22437 9.57593 1.646L5.14258 6.88525C4.5459 7.59045 3.45984 7.59387 2.85864 6.89258L0.240723 3.83826C-0.118652 3.41895 -0.0701904 2.78772 0.349243 2.42822Z"
+                                      fill="url(#paint_linear_7_2267_0)" fill-opacity="1.000000"
+                                      fill-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div class="return_terms_des">Обратная доставка товаров на склад при отказе —
+                            <span class="free">бесплатно</span>
+                            <div class="free_return_info">
+                                Если товары вам не подойдут, мы вернем их обратно на склад — это бесплатно
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar__payment_details">
+                    <div class="payment_details_title">
+                        <div class="payment_details_title_text">Оплата картой</div>
+                        <div class="edit_pencil payment_edit_action">
+                            <svg width="15.863281" height="15.862885" viewBox="0 0 15.8633 15.8629" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs/>
+                                <path id="Vector"
+                                      d="M13.8577 5.78699L13.8579 5.78714L15.2759 4.36905C16.0591 3.58585 16.0591 2.31601 15.2759 1.53281L14.3306 0.587402C13.5474 -0.195801 12.2776 -0.195801 11.4944 0.587402L11.0217 1.06006L11.0215 1.05991L0.80835 11.2729L0.0100098 15.2646C-0.0598145 15.6144 0.248535 15.9229 0.598389 15.8529L4.59009 15.0546L13.8577 5.78699ZM11.0215 2.95078L12.9124 4.84158L3.93091 13.8229L1.56738 14.2957L2.04004 11.9321L11.0215 2.95078ZM13.8579 3.8963L11.967 2.00549L12.4397 1.53281C12.7007 1.27176 13.124 1.27176 13.3853 1.53281L14.3306 2.47821C14.5916 2.73929 14.5916 3.16257 14.3306 3.42365L13.8579 3.8963Z"
+                                      fill="#CB11AB" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card_details sidebar__card_details">
+                        <div class="payment_system">
+                            <svg width="30.000000" height="9.333374" viewBox="0 0 30 9.33337" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs>
+                                    <linearGradient id="paint_linear_7_2286_0" x1="20.859009" y1="2.289431"
+                                                    x2="29.426626" y2="2.289431" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#00A3E1"/>
+                                        <stop offset="0.304200" stop-color="#009ADD"/>
+                                        <stop offset="0.798700" stop-color="#0082D4"/>
+                                        <stop offset="1.000000" stop-color="#0076CF"/>
+                                    </linearGradient>
+                                </defs>
+                                <path id="Vector"
+                                      d="M16.6812 1.51038L14.8644 5.4248L14.6805 5.4248L14.6805 0.66687L12.0851 0.66687L12.0851 8.66895L14.2371 8.66895C14.821 8.66895 15.3402 8.33374 15.5889 7.8147L17.4165 3.91101L17.6003 3.91101L17.6003 8.66895L20.1958 8.66895L20.1958 0.66687L18.0114 0.66687C17.449 0.66687 16.9191 1.00208 16.6812 1.51038Z"
+                                      fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector"
+                                      d="M6.97241 1.71582L5.90186 5.4248L5.71802 5.4248L4.6366 1.71582C4.45276 1.08862 3.87952 0.66687 3.23071 0.66687L0.667725 0.66687L0.667725 8.66895L3.26318 8.66895L3.26318 3.91101L3.44702 3.91101L4.93933 8.66895L6.66968 8.66895L8.16199 3.91101L8.34583 3.91101L8.34583 8.66895L10.9413 8.66895L10.9413 0.66687L8.3783 0.66687C7.72949 0.66687 7.14551 1.08862 6.97241 1.71582Z"
+                                      fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <path id="Vector"
+                                      d="M21.3243 4.23401L21.3243 8.66895L23.9205 8.66895L23.9205 6.07288L26.7115 6.07288C27.9231 6.07288 28.9508 5.30481 29.3295 4.23401L21.3243 4.23401Z"
+                                      fill="#319B42" fill-opacity="1.000000" fill-rule="nonzero"/>
+                                <linearGradient id="paint_linear_7_22861_0" x1="20.859009" y1="2.289431"
+                                                x2="29.426626"
+                                                y2="2.289431" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00A3E1"/>
+                                    <stop offset="0.304200" stop-color="#009ADD"/>
+                                    <stop offset="0.798700" stop-color="#0082D4"/>
+                                    <stop offset="1.000000" stop-color="#0076CF"/>
+                                </linearGradient>
+                                <path id="Vector"
+                                      d="M26.6356 0.66687L20.859 0.66687C21.2159 2.57068 22.882 3.91199 24.8832 3.91199L29.3726 3.91199C29.405 3.73889 29.4266 3.54419 29.4266 3.34949C29.4266 1.80261 28.1826 0.66687 26.6356 0.66687Z"
+                                      fill="url(#paint_linear_7_22861_0)" fill-opacity="1.000000"
+                                      fill-rule="nonzero"/>
+                            </svg>
+                        </div>
+                        <div class="sidebar__card_number">1234 12•• •••• 1234</div>
+                    </div>
+                    <div class="pay_now_agree">
+                        <div class="pay_now_agree_checkbox">
+                            <label>
+                                <input type="checkbox" name="list_item" class="real_checkbox" id="agree_checkbox">
+                                <span class="agree_checkbox"></span>
+                                Списать оплату сразу
+                            </label>
+                        </div>
+                        <div class="pay_now_description">Спишем оплату с карты при получении</div>
+                    </div>
+                </div>
+                <button class="confirm_button" id="confirmButton" type="button">Заказать</button>
+                <div class="sidebar__terms">
+                    <div class="sidebar__terms_checkmark">
+                        <svg width="12.508301" height="10.161804" viewBox="0 0 12.5083 10.1618" fill="none"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path id="Path Copy 2 (Stroke)"
+                                  d="M12.5083 1.36066L4.3385 10.1618L0 5.34955L1.48547 4.01031L4.36011 7.19885L11.0426 0L12.5083 1.36066Z"
+                                  fill="#000000" fill-opacity="1.000000" fill-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="sidebar__terms_text">Соглашаюсь <a href="#">с правилами пользования торговой
+                        площадкой</a> и
+                        <a href="">возврата</a></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+<footer class="footer" id="footer">
+    <div class="container footer__container">
+        <div class="footer_copyright">
+            © <span id="actualDate"></span> ООО «Товары и точка»
+        </div>
+    </div>
+</footer>
+<div class="bottom_navbar">
+    <div class="container bottom_navbar__container">
+        <div class="bottom_navbar_items">
+            <div class="bottom_navbar_item">
+                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>
+                        Created with Pixso.
+                    </desc>
+                    <defs>
+                        <clipPath id="clip13_118">
+                            <rect id="main" width="28.000000" height="28.000000" fill="white" fill-opacity="0"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#clip13_118)">
+                        <path id="Union"
+                              d="M13.293 3.69507L3.39258 13.4302C2.4353 14.3716 3.10181 15.9998 4.44409 15.9998L5 15.9998L5 22C5 23.1045 5.89551 24 7 24L11.25 24C11.5261 24 11.75 23.7761 11.75 23.5L11.75 20.4102C11.75 19.3054 12.6455 18.4102 13.75 18.4102L14.25 18.4102C15.3545 18.4102 16.25 19.3054 16.25 20.4102L16.25 23.5C16.25 23.7761 16.4739 24 16.75 24L21 24C22.1045 24 23 23.1045 23 22L23 15.9998L23.3787 15.9998C24.7151 15.9998 25.3843 14.384 24.4395 13.4392L14.7012 3.70117C14.313 3.31299 13.6812 3.30688 13.293 3.69507Z"
+                              clip-rule="evenodd" fill="#CCCCCC" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="bottom_navbar_item">
+                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>
+                        Created with Pixso.
+                    </desc>
+                    <defs>
+                        <clipPath id="clip13_122">
+                            <rect id="catalog" width="28.000000" height="28.000000" fill="white" fill-opacity="0"/>
+                        </clipPath>
+                    </defs>
+                    <rect id="catalog" width="28.000000" height="28.000000" fill="#FFFFFF" fill-opacity="1.000000"/>
+                    <g clip-path="url(#clip13_122)">
+                        <path id="Subtract"
+                              d="M19.7961 17.5L22.6846 20.3884C22.7212 20.425 22.7568 20.4622 22.7915 20.5L26.5 20.5C27.3284 20.5 28 19.8284 28 19C28 18.1716 27.3284 17.5 26.5 17.5L19.7961 17.5ZM19.6279 8.5C19.2007 7.40356 18.6025 6.39258 17.8662 5.5L26.5 5.5C27.3284 5.5 28 6.17163 28 7C28 7.82837 27.3284 8.5 26.5 8.5L19.6279 8.5ZM20.3735 12.4868C20.3735 12.1541 20.3586 11.825 20.3298 11.5L26.5 11.5C27.3284 11.5 28 12.1716 28 13C28 13.8284 27.3284 14.5 26.5 14.5L20.1892 14.5C20.3103 13.8467 20.3735 13.1736 20.3735 12.4868Z"
+                              clip-rule="evenodd" fill="#CCCCCC" fill-opacity="1.000000" fill-rule="evenodd"/>
+                        <path id="Union"
+                              d="M3.8999 12.4868C3.8999 9.45654 6.35645 7 9.38672 7C12.4167 7 14.8733 9.45654 14.8733 12.4868C14.8733 15.5168 12.4167 17.9734 9.38672 17.9734C6.35645 17.9734 3.8999 15.5168 3.8999 12.4868ZM0.399902 12.4868C0.399902 7.52344 4.42334 3.5 9.38672 3.5C14.3499 3.5 18.3733 7.52344 18.3733 12.4868C18.3733 13.8372 18.0754 15.1179 17.542 16.2671C17.2158 16.9692 17.2876 17.8201 17.8347 18.3674L21.2703 21.8027C21.8872 22.4197 21.8872 23.4202 21.2703 24.0374C20.6531 24.6543 19.6526 24.6543 19.0356 24.0374L15.7117 20.7131C15.1411 20.1428 14.2456 20.0908 13.53 20.4634C12.2903 21.1086 10.8811 21.4734 9.38672 21.4734C4.42334 21.4734 0.399902 17.45 0.399902 12.4868Z"
+                              fill="#CCCCCC" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="bottom_navbar_item active">
+                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>
+                        Created with Pixso.
+                    </desc>
+                    <defs>
+                        <clipPath id="clip13_127">
+                            <rect id="cart" width="28.000000" height="28.000000" fill="white" fill-opacity="0"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#clip13_127)">
+                        <path id="Vector"
+                              d="M5 3C4.01733 3 3.11768 3.08496 2.45435 3.22729C2.12646 3.29736 1.83521 3.38599 1.61499 3.49756C1.5083 3.55151 1.38818 3.62573 1.28491 3.73389C1.19995 3.823 1 4.06909 1 4.5C1 4.93091 1.19995 5.177 1.28491 5.26611C1.38818 5.37427 1.5083 5.44849 1.61499 5.50244C1.83521 5.61401 2.12646 5.70264 2.45435 5.77271C3.11768 5.91504 4.01733 6 5 6C5.98267 6 6.88232 5.91504 7.54565 5.77271C7.87354 5.70264 8.16479 5.61401 8.38501 5.50244C8.4917 5.44849 8.61182 5.37427 8.71509 5.26611C8.80005 5.177 9 4.93091 9 4.5C9 4.06909 8.80005 3.823 8.71509 3.73389C8.61182 3.62573 8.4917 3.55151 8.38501 3.49756C8.16479 3.38599 7.87354 3.29736 7.54565 3.22729C6.88232 3.08496 5.98267 3 5 3ZM11.5037 18.8481C10.99 18.9355 10.4895 18.6353 10.3247 18.1411L6.84692 7.70752C6.73169 7.36206 6.99268 7.00659 7.35693 7.01294L26.0195 7.33374C26.3289 7.33911 26.5591 7.62134 26.5024 7.92578L25.0208 15.8481C24.9397 16.2827 24.5959 16.6206 24.1602 16.6948L11.5037 18.8481ZM10.75 25C11.9927 25 13 23.9927 13 22.75C13 21.5073 11.9927 20.5 10.75 20.5C9.50732 20.5 8.5 21.5073 8.5 22.75C8.5 23.9927 9.50732 25 10.75 25ZM26 22.75C26 23.9927 24.9927 25 23.75 25C22.5073 25 21.5 23.9927 21.5 22.75C21.5 21.5073 22.5073 20.5 23.75 20.5C24.9927 20.5 26 21.5073 26 22.75Z"
+                              fill="#CB11AB" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="bottom_navbar_item">
+                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>
+                        Created with Pixso.
+                    </desc>
+                    <defs>
+                        <clipPath id="clip13_129">
+                            <rect id="favorites" width="28.000000" height="28.000000" fill="white" fill-opacity="0"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#clip13_129)">
+                        <path id="Heart"
+                              d="M13.158 23.416C7.75244 18.6196 3 13.9475 3 9.97827C3 6.60864 5.61816 4 9 4C10.6584 4 12.3167 4.69531 13.5071 5.85278C13.7283 6.06787 14.0901 6.06787 14.311 5.85278C15.5015 4.69531 17.1599 4 18.8181 4C22.2 4 24.8181 6.60864 24.8181 9.97827C24.8181 13.9478 19.8977 18.6201 14.479 23.4165C14.1018 23.7505 13.5347 23.7505 13.158 23.416Z"
+                              fill="#CCCCCC" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="bottom_navbar_item">
+                <svg width="28.000000" height="28.000000" viewBox="0 0 28 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <desc>
+                        Created with Pixso.
+                    </desc>
+                    <defs>
+                        <clipPath id="clip13_131">
+                            <rect id="profile" width="28.000000" height="28.000000" fill="white" fill-opacity="0"/>
+                        </clipPath>
+                    </defs>
+                    <g clip-path="url(#clip13_131)">
+                        <path id="Vector"
+                              d="M13.8 13C16.4912 13 18.8 10.7871 18.8 7.93359C18.8 5.11597 16.478 3 13.8 3C11.1221 3 8.78687 5.16455 8.80005 7.95776C8.80005 10.7871 11.1089 13 13.8 13ZM5.62769 24C3.54492 24 2.80005 23.4407 2.80005 22.3728C2.80005 19.2712 7.03442 15 13.8069 15C20.5657 15 24.8 19.2712 24.8 22.3728C24.8 23.4407 24.0552 24 21.9724 24L5.62769 24Z"
+                              fill="#CCCCCC" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </g>
+                </svg>
+
+            </div>
+        </div>
+    </div>
+    <div class="payment_edit_wrapper window_wrapper">
+        <div class="payment_edit">
+            <div class="payment_edit_main">
+                <div class="payment_edit_top">
+                    <div class="payment_edit_top_title">
+                        Способ оплаты
+                    </div>
+                    <div class="payment_edit_top_close">
+                        <img src="src/static/images/close.svg" alt="Close">
+                    </div>
+                </div>
+                <div class="payment_edit_variants">
+                    <div class="payment_edit_variant">
+                        <label for="mir">
+                            <input type="radio" name="payment" id="mir" value="mir" checked class="real_radio">
+                            <span class="custom_radio"></span>
+                            <img src="src/static/images/mir.svg" alt="Mir">
+                            <span class="payment_edit_card_number">1234 56•• •••• 1234</span>
+                        </label>
+                    </div>
+                    <div class="payment_edit_variant">
+                        <label for="visa">
+                            <input type="radio" name="payment" id="visa" value="visa" class="real_radio">
+                            <span class="custom_radio"></span>
+                            <img src="src/static/images/visa.svg" alt="Visa">
+                            <span class="payment_edit_card_number">1234 56•• •••• 1234</span>
+                        </label>
+                    </div>
+                    <div class="payment_edit_variant">
+                        <label for="mastercard">
+                            <input type="radio" name="payment" id="mastercard" value="mastercard" class="real_radio">
+                            <span class="custom_radio"></span>
+                            <img src="src/static/images/mastercard.svg" alt="Mastercard">
+                            <span class="payment_edit_card_number">1234 56•• •••• 1234</span>
+                        </label>
+                    </div>
+                    <div class="payment_edit_variant">
+                        <label for="maestro">
+                            <input type="radio" name="payment" id="maestro" value="maestro" class="real_radio">
+                            <span class="custom_radio"></span>
+                            <img src="src/static/images/maestro.svg" alt="Maestro">
+                            <span class="payment_edit_card_number">1234 56•• •••• 1234</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="edit_payment_button wrapper_button">Выбрать</button>
+        </div>
+    </div>
+    <div class="edit_delivery_wrapper window_wrapper">
+        <div class="delivery_edit">
+            <div class="delivery_edit_main">
+                <div class="delivery_edit_top">
+                    <div class="delivery_edit_top_title">
+                        Способ доставки
+                    </div>
+                    <div class="delivery_edit_top_close">
+                        <img src="src/static/images/close.svg" alt="Close">
+                    </div>
+                </div>
+                <div class="delivery_edit_methods">
+                    <button type="button" class="delivery_edit_method active">В пункт выдачи</button>
+                    <button type="button" class="delivery_edit_method">Курьером</button>
+                </div>
+                <div class="user_addresses">
+                    <div class="user_addresses_title">Мои адреса</div>
+                    <div class="delivery_edit_variants">
+                        <div class="delivery_edit_variant">
+                            <label>
+                                <input type="radio" name="address" checked class="real_radio">
+                                <span class="custom_radio"></span>
+                                <span class="address">Бишкек, улица Табышалиева, 57
+                            <div class="rating">
+                                <div class="rating_star">
+                                    <img src="src/static/images/star.svg" alt="Star">
+                                </div>
+                                <div class="rating_count">4.99</div>
+                                <div class="pickup_point_place">Пункт выдачи</div>
+                            </div></span>
+
+                            </label>
+                            <div class="trash">
+                                <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector"
+                                          d="M4.5 3.5L12.9258 3.5L12.144 13.6155C12.084 14.3969 11.4321 15 10.6484 15L4.34619 15C3.56445 15 2.91357 14.3992 2.85107 13.6196L2.0415 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15771 0 5.96875 0L9.03125 0C9.84229 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7764 2.5 15 2.72388 15 3C15 3.27612 14.7764 3.5 14.5 3.5L13.9287 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6484 16L4.34619 16C3.04297 16 1.9585 14.9986 1.85449 13.6993L1.03857 3.5L0.5 3.5C0.223633 3.5 0 3.27612 0 3C0 2.72388 0.223633 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20984 5.70996 1 5.96875 1L9.03125 1C9.29004 1 9.5 1.20984 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                          fill="#9797AF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="delivery_edit_variant">
+                            <label>
+                                <input type="radio" name="address" class="real_radio">
+                                <span class="custom_radio"></span>
+                                <span class="address">Бишкек, улица Жукеева-Пудовкина, 77/1
+                            <div class="rating">
+                                <div class="rating_star">
+                                    <img src="src/static/images/star.svg" alt="Star">
+                                </div>
+                                <div class="rating_count">4.99</div>
+                                <div class="pickup_point_place">Пункт выдачи</div>
+                            </div>
+                            </span>
+                            </label>
+                            <div class="trash">
+                                <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector"
+                                          d="M4.5 3.5L12.9258 3.5L12.144 13.6155C12.084 14.3969 11.4321 15 10.6484 15L4.34619 15C3.56445 15 2.91357 14.3992 2.85107 13.6196L2.0415 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15771 0 5.96875 0L9.03125 0C9.84229 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7764 2.5 15 2.72388 15 3C15 3.27612 14.7764 3.5 14.5 3.5L13.9287 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6484 16L4.34619 16C3.04297 16 1.9585 14.9986 1.85449 13.6993L1.03857 3.5L0.5 3.5C0.223633 3.5 0 3.27612 0 3C0 2.72388 0.223633 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20984 5.70996 1 5.96875 1L9.03125 1C9.29004 1 9.5 1.20984 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                          fill="#9797AF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="delivery_edit_variant">
+                            <label>
+                                <input type="radio" name="address" class="real_radio">
+                                <span class="custom_radio"></span>
+                                <span class="address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
+                            <div class="rating">
+                                <div class="rating_star">
+                                    <img src="src/static/images/star.svg" alt="Star">
+                                </div>
+                                <div class="rating_count">4.99</div>
+                                <div class="pickup_point_place">Пункт выдачи</div>
+                            </div></span>
+
+                            </label>
+                            <div class="trash">
+                                <svg width="15.000000" height="16.000000" viewBox="0 0 15 16" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector"
+                                          d="M4.5 3.5L12.9258 3.5L12.144 13.6155C12.084 14.3969 11.4321 15 10.6484 15L4.34619 15C3.56445 15 2.91357 14.3992 2.85107 13.6196L2.0415 3.5L4.5 3.5ZM4.5 2.5L4.5 1.46875C4.5 0.657593 5.15771 0 5.96875 0L9.03125 0C9.84229 0 10.5 0.657593 10.5 1.46875L10.5 2.5L14.5 2.5C14.7764 2.5 15 2.72388 15 3C15 3.27612 14.7764 3.5 14.5 3.5L13.9287 3.5L13.1411 13.6926C13.0405 14.9947 11.9546 16 10.6484 16L4.34619 16C3.04297 16 1.9585 14.9986 1.85449 13.6993L1.03857 3.5L0.5 3.5C0.223633 3.5 0 3.27612 0 3C0 2.72388 0.223633 2.5 0.5 2.5L4.5 2.5ZM5.5 2.5L5.5 1.46875C5.5 1.20984 5.70996 1 5.96875 1L9.03125 1C9.29004 1 9.5 1.20984 9.5 1.46875L9.5 2.5L5.5 2.5Z"
+                                          fill="#9797AF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <button type="button" class="edit_delivery_button wrapper_button">Выбрать</button>
+        </div>
+    </div>
+</div>
+<script src="src/scripts/app.js" type="module"></script>
+</body>
+</html>
